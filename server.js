@@ -27,4 +27,4 @@ app.get("/",(req,res)=>{
     res.send("THIS IS AN EXPRESS APP")
 })
 
-app.listen(5000,()=>console.log("server is runnning"))
+app.listen(80,()=>console.log("server is runnning"))
