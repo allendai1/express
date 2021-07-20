@@ -1,7 +1,5 @@
 const express = require("express");
 const app = express();
-var sizeof = require('object-sizeof')
-const fs = require("fs");
 const ytdl = require("ytdl-core");
 var cors = require('cors')
 
@@ -13,14 +11,14 @@ app.use(cors())
 
 app.get("/audio", (req, res) => {
 	const yt_link  = req.query.yt_link;
-	let audio  = ytdl(yt_link,{
+        ytdl(yt_link,{
 		filter: 'audioonly'
 	}).pipe(res);
 	
 });
 app.get("/video", (req, res) => {
 	const yt_link  = req.query.yt_link;
-	let video  = ytdl(yt_link,{
+	 ytdl(yt_link,{
 		filter: 'videoonly',
 	}).pipe(res);
 
