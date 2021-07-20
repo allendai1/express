@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 const ytdl = require("ytdl-core");
 var cors = require('cors')
-
-app.use(require('express-status-monitor')());
 app.use(express.static("static"));
 app.use(cors())
 
