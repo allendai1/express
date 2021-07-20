@@ -10,8 +10,8 @@ app.use(express.static("static"));
 app.use(cors())
 
 
-app.listen(80,()=>console.log("server is runnning"))
-=======
+// app.listen(80,()=>console.log("server is runnning"))
+
 app.get("/audio", (req, res) => {
 	const yt_link  = req.query.yt_link;
 	let audio  = ytdl(yt_link,{
@@ -24,7 +24,6 @@ app.get("/video", (req, res) => {
 	const yt_link  = req.query.yt_link;
 	let video  = ytdl(yt_link,{
 		filter: 'videoonly',
-		// quality: '134'
 	}).pipe(res);
 
 
