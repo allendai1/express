@@ -10,7 +10,6 @@ app.use(express.static("static"));
 app.use(cors())
 
 
-<<<<<<< HEAD
 app.listen(80,()=>console.log("server is runnning"))
 =======
 app.get("/audio", (req, res) => {
@@ -27,10 +26,9 @@ app.get("/video", (req, res) => {
 		filter: 'videoonly',
 		// quality: '134'
 	}).pipe(res);
-	// console.log("video request received");
+
 
 	
 });
 
 app.listen(5000, () => console.log("server is running"));
->>>>>>> 49de53fcc479eeccc8edd9ab05ad57ff035113f6
