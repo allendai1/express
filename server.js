@@ -10,14 +10,12 @@ app.use(express.static("static"));
 app.use(cors())
 
 
-// app.listen(80,()=>console.log("server is runnning"))
 
 app.get("/audio", (req, res) => {
 	const yt_link  = req.query.yt_link;
 	let audio  = ytdl(yt_link,{
 		filter: 'audioonly'
 	}).pipe(res);
-	console.log("audio request received");
 	
 });
 app.get("/video", (req, res) => {
@@ -29,5 +27,5 @@ app.get("/video", (req, res) => {
 
 	
 });
+app.listen(80,()=>console.log("server is runnning"))
 
-app.listen(5000, () => console.log("server is running"));
