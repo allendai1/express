@@ -16,7 +16,6 @@ app.get("/audio", (req, res) => {
 		filter: 'audioonly'
 	}).pipe(res);
 	console.log("audio request received");
-	console.log(sizeof(audio))
 	
 });
 app.get("/video", (req, res) => {
@@ -26,7 +25,6 @@ app.get("/video", (req, res) => {
 		// quality: '134'
 	}).pipe(res);
 	// console.log("video request received");
-	console.log(sizeof(video))
 
 	
 });
