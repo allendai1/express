@@ -5,7 +5,7 @@ var cors = require('cors')
 app.use(express.static("static"));
 app.use(cors())
 
-console.log("wok");
+console.log("wokky");
 
 app.get("/audio", (req, res) => {
 	const yt_link  = req.query.yt_link;
